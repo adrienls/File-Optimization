@@ -1,5 +1,12 @@
 #!/bin/sh
 
+# Exit when any command fails
+set -e
+# Keep track of the last executed command
+trap 'last_command=$BASH_COMMAND' DEBUG
+# Echo an error message before exiting
+trap 'echo; echo "\"${last_command}\" command failed with exit code $?."' EXIT
+
 output_name(){
   # output_name requires 1 argument
   # $1 is the file name
