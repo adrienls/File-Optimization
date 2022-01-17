@@ -101,6 +101,7 @@ help(){
    echo "* For PNG and JPG files, date exif are preserved by the optimization. However, creation date may vary depending on the OS."
    echo "* Date exif are not kept for PDF files."
    echo "* If you specify a directory, each subdirectory will be tested recursively and each compatible file will be optimized."
+   echo "* When optimizing files, opti tries to apply lossless compression. Therefore, pti does not significantly change a file quality."
    echo
    echo "More information here: https://github.com/adrienls/File-Optimization"
    echo
