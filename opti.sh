@@ -2,10 +2,6 @@
 
 # Exit when any command fails
 set -e
-# Keep track of the last executed command
-trap 'last_command=$BASH_COMMAND' DEBUG
-# Echo an error message before exiting
-trap 'echo; echo "\"${last_command}\" command failed with exit code $?."' EXIT
 
 output_name(){
   # output_name requires 1 argument
@@ -66,7 +62,6 @@ compress_file(){
     do
       # Get info on current file
       currentFileSize="$(file_size "$fileName")"
-      echo "$currentFileSize"
 
       # Process the file according to its format
       # Compress PDF
