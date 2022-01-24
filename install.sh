@@ -5,7 +5,7 @@ sudo apt update
 sudo apt install --yes ghostscript optipng jpegoptim
 
 # Download opti shell script
-curl -O https://raw.githubusercontent.com/adrlsx/File-Optimization/main/opti.sh
+curl -O https://raw.githubusercontent.com/adrlsx/File-Optimization/master/opti.sh
 
 # Add script to path
 filePath="/home/$USER/.local/bin/opti"
